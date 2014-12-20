@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2676CF5C1A44894F0061B6A6"
-               BuildableName = "ATCOnboardingController.framework"
-               BlueprintName = "ATCOnboardingController"
+               BlueprintIdentifier = "2676CF8B1A448F650061B6A6"
+               BuildableName = "ATCOnboardingAuthDemo.app"
+               BlueprintName = "ATCOnboardingAuthDemo"
                ReferencedContainer = "container:ATCOnboardingController.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,9 +28,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2676CF671A44894F0061B6A6"
-               BuildableName = "ATCOnboardingControllerTests.xctest"
-               BlueprintName = "ATCOnboardingControllerTests"
+               BlueprintIdentifier = "2676CFA31A448F660061B6A6"
+               BuildableName = "ATCOnboardingAuthDemoTests.xctest"
+               BlueprintName = "ATCOnboardingAuthDemoTests"
                ReferencedContainer = "container:ATCOnboardingController.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,9 +46,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2676CF671A44894F0061B6A6"
-               BuildableName = "ATCOnboardingControllerTests.xctest"
-               BlueprintName = "ATCOnboardingControllerTests"
+               BlueprintIdentifier = "2676CFA31A448F660061B6A6"
+               BuildableName = "ATCOnboardingAuthDemoTests.xctest"
+               BlueprintName = "ATCOnboardingAuthDemoTests"
                ReferencedContainer = "container:ATCOnboardingController.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -56,9 +56,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2676CF5C1A44894F0061B6A6"
-            BuildableName = "ATCOnboardingController.framework"
-            BlueprintName = "ATCOnboardingController"
+            BlueprintIdentifier = "2676CF8B1A448F650061B6A6"
+            BuildableName = "ATCOnboardingAuthDemo.app"
+            BlueprintName = "ATCOnboardingAuthDemo"
             ReferencedContainer = "container:ATCOnboardingController.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -72,15 +72,15 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2676CF5C1A44894F0061B6A6"
-            BuildableName = "ATCOnboardingController.framework"
-            BlueprintName = "ATCOnboardingController"
+            BlueprintIdentifier = "2676CF8B1A448F650061B6A6"
+            BuildableName = "ATCOnboardingAuthDemo.app"
+            BlueprintName = "ATCOnboardingAuthDemo"
             ReferencedContainer = "container:ATCOnboardingController.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -90,15 +90,15 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2676CF5C1A44894F0061B6A6"
-            BuildableName = "ATCOnboardingController.framework"
-            BlueprintName = "ATCOnboardingController"
+            BlueprintIdentifier = "2676CF8B1A448F650061B6A6"
+            BuildableName = "ATCOnboardingAuthDemo.app"
+            BlueprintName = "ATCOnboardingAuthDemo"
             ReferencedContainer = "container:ATCOnboardingController.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

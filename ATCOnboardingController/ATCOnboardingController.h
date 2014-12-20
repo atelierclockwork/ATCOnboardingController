@@ -16,4 +16,7 @@ FOUNDATION_EXPORT const unsigned char ATCOnboardingControllerVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <ATCOnboardingController/PublicHeader.h>
 
-
+#import <ATCOnboardingController/ATCOnboardingSession.h>
+#import <ATCOnboardingController/ATCOnboardingAuthItem.h>
+#import <ATCOnboardingController/ATCOnboardingAuth.h>
+#import <ATCOnboardingController/ATCOnboardingViewProtocol.h>

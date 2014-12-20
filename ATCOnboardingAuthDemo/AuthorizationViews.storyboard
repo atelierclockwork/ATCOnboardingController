@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Auth View Controller-->
+        <scene sceneID="QO0-gz-g8q">
+            <objects>
+                <viewController storyboardIdentifier="cameraAuth" id="X7F-4H-5YZ" customClass="ATCAuthViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bWG-Y0-uuv"/>
+                        <viewControllerLayoutGuide type="bottom" id="bXc-ny-foH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KLD-Pd-hRo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kEr-w1-hWH">
+                                <rect key="frame" x="239" y="550" width="123" height="30"/>
+                                <state key="normal" title="Authorize Camera">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkAuth:" destination="X7F-4H-5YZ" eventType="touchUpInside" id="KWA-g1-IAz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We need to use your camera to let you take photos." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUV-CG-QOP">
+                                <rect key="frame" x="16" y="28" width="568" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IUV-CG-QOP" firstAttribute="leading" secondItem="KLD-Pd-hRo" secondAttribute="leadingMargin" id="IGA-jc-AC8"/>
+                            <constraint firstItem="kEr-w1-hWH" firstAttribute="top" relation="greaterThanOrEqual" secondItem="IUV-CG-QOP" secondAttribute="bottom" constant="8" symbolic="YES" id="Zx1-0y-b4n"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IUV-CG-QOP" secondAttribute="trailing" id="eW2-z1-poB"/>
+                            <constraint firstItem="bXc-ny-foH" firstAttribute="top" secondItem="kEr-w1-hWH" secondAttribute="bottom" constant="20" id="fN3-60-Fgq"/>
+                            <constraint firstAttribute="centerX" secondItem="kEr-w1-hWH" secondAttribute="centerX" id="tPT-g7-LeH"/>
+                            <constraint firstItem="IUV-CG-QOP" firstAttribute="top" secondItem="bWG-Y0-uuv" secondAttribute="bottom" constant="8" symbolic="YES" id="xCV-CN-JU9"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wFg-DQ-PQ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-499" y="1138"/>
+        </scene>
+        <!--Auth View Controller-->
+        <scene sceneID="hzl-Io-McH">
+            <objects>
+                <viewController storyboardIdentifier="locationAuth" id="8Ro-db-LFE" customClass="ATCAuthViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kAP-Ak-kKh"/>
+                        <viewControllerLayoutGuide type="bottom" id="EIw-x9-zT3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dtf-D7-c8l">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zS8-9p-KkZ">
+                                <rect key="frame" x="249" y="512" width="102" height="30"/>
+                                <state key="normal" title="Skip Locations">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="skipAuth:" destination="8Ro-db-LFE" eventType="touchUpInside" id="hqO-RK-15T"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2z-ur-wiJ">
+                                <rect key="frame" x="232" y="550" width="136" height="30"/>
+                                <state key="normal" title="Authorize Locations">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkAuth:" destination="8Ro-db-LFE" eventType="touchUpInside" id="uzd-MQ-WVN"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We need access to your location to show you offers." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MAP-vE-If8">
+                                <rect key="frame" x="16" y="28" width="568" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MAP-vE-If8" firstAttribute="leading" secondItem="dtf-D7-c8l" secondAttribute="leadingMargin" id="9IZ-fw-VEb"/>
+                            <constraint firstItem="EIw-x9-zT3" firstAttribute="top" secondItem="l2z-ur-wiJ" secondAttribute="bottom" constant="20" id="MZB-IR-IbW"/>
+                            <constraint firstItem="l2z-ur-wiJ" firstAttribute="top" secondItem="zS8-9p-KkZ" secondAttribute="bottom" constant="8" symbolic="YES" id="QaM-90-Hfs"/>
+                            <constraint firstItem="zS8-9p-KkZ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="MAP-vE-If8" secondAttribute="bottom" constant="8" symbolic="YES" id="Tkc-Eb-lfo"/>
+                            <constraint firstAttribute="centerX" secondItem="l2z-ur-wiJ" secondAttribute="centerX" id="UB1-xw-GaY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MAP-vE-If8" secondAttribute="trailing" id="hzR-Ok-Gkn"/>
+                            <constraint firstItem="MAP-vE-If8" firstAttribute="top" secondItem="kAP-Ak-kKh" secondAttribute="bottom" constant="8" symbolic="YES" id="v0l-US-b8k"/>
+                            <constraint firstAttribute="centerX" secondItem="zS8-9p-KkZ" secondAttribute="centerX" id="zkw-5j-ojM"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R6T-K4-E1V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="804" y="1138"/>
+        </scene>
+        <!--Auth View Controller-->
+        <scene sceneID="VSq-Ma-GjF">
+            <objects>
+                <viewController storyboardIdentifier="finishAuth" id="5tf-5T-5CG" customClass="ATCAuthViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xRr-Vt-X1r"/>
+                        <viewControllerLayoutGuide type="bottom" id="Gu1-aF-XT2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cDs-B8-UXC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cXZ-Y4-6AC">
+                                <rect key="frame" x="280" y="550" width="41" height="30"/>
+                                <state key="normal" title="Finish">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkAuth:" destination="5tf-5T-5CG" eventType="touchUpInside" id="aye-1J-iHm"/>
+                                    <action selector="skipAuth:" destination="5tf-5T-5CG" eventType="touchUpInside" id="Cdj-VQ-fRu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank you for taking the time to set up our app." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0tx-b8-4xS">
+                                <rect key="frame" x="16" y="28" width="568" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0tx-b8-4xS" firstAttribute="top" secondItem="xRr-Vt-X1r" secondAttribute="bottom" constant="8" symbolic="YES" id="7gC-CZ-cGB"/>
+                            <constraint firstItem="Gu1-aF-XT2" firstAttribute="top" secondItem="cXZ-Y4-6AC" secondAttribute="bottom" constant="20" id="9bd-NC-v8j"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0tx-b8-4xS" secondAttribute="trailing" id="Hsp-BE-H29"/>
+                            <constraint firstAttribute="centerX" secondItem="cXZ-Y4-6AC" secondAttribute="centerX" id="SSb-4C-nQr"/>
+                            <constraint firstItem="cXZ-Y4-6AC" firstAttribute="top" relation="greaterThanOrEqual" secondItem="0tx-b8-4xS" secondAttribute="bottom" constant="8" symbolic="YES" id="jQv-Gg-SxT"/>
+                            <constraint firstItem="0tx-b8-4xS" firstAttribute="leading" secondItem="cDs-B8-UXC" secondAttribute="leadingMargin" id="wee-Ku-0Tb"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lq3-M2-fsq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1449" y="1138"/>
+        </scene>
+        <!--Auth View Controller-->
+        <scene sceneID="eLw-3E-Ina">
+            <objects>
+                <viewController storyboardIdentifier="photoAuth" id="7wO-LV-wVS" customClass="ATCAuthViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rOI-fl-tf6"/>
+                        <viewControllerLayoutGuide type="bottom" id="l0x-gu-hOQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="D3s-xv-zG8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dVm-bc-RGg">
+                                <rect key="frame" x="219" y="550" width="162" height="30"/>
+                                <state key="normal" title="Authorize Photo Library">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkAuth:" destination="7wO-LV-wVS" eventType="touchUpInside" id="CuM-6W-AgR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We need to see old photos to let you apply effects to them." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYd-uP-kZH">
+                                <rect key="frame" x="16" y="28" width="568" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="l0x-gu-hOQ" firstAttribute="top" secondItem="dVm-bc-RGg" secondAttribute="bottom" constant="20" id="1hq-wv-QD1"/>
+                            <constraint firstItem="cYd-uP-kZH" firstAttribute="top" secondItem="rOI-fl-tf6" secondAttribute="bottom" constant="8" symbolic="YES" id="Gw2-Th-Jbm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cYd-uP-kZH" secondAttribute="trailing" id="fpx-UO-bDG"/>
+                            <constraint firstItem="cYd-uP-kZH" firstAttribute="leading" secondItem="D3s-xv-zG8" secondAttribute="leadingMargin" id="khW-Yd-D7J"/>
+                            <constraint firstAttribute="centerX" secondItem="dVm-bc-RGg" secondAttribute="centerX" id="vdm-UZ-4K6"/>
+                            <constraint firstItem="dVm-bc-RGg" firstAttribute="top" relation="greaterThanOrEqual" secondItem="cYd-uP-kZH" secondAttribute="bottom" constant="8" symbolic="YES" id="wHw-Rm-t9H"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OKx-8h-n4Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="164" y="1138"/>
+        </scene>
+    </scenes>
+</document>
