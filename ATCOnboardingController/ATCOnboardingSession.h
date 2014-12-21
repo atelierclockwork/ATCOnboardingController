@@ -13,11 +13,11 @@
 @class ATCOnboardingAuthItem;
 
 @interface ATCOnboardingSession : NSObject
--(instancetype)initWithAuthTypes:(NSArray *)authTypes completionView:(UIViewController<ATCOnboardingView> *)completionView navigationController:(UINavigationController *)navigationController;
--(instancetype)initWithAuthTypes:(NSArray *)authTypes completionView:(UIViewController *)completionView;
+-(instancetype)initWithAuthTypes:(NSArray *)authTypes;
+-(instancetype)initWithAuthTypes:(NSArray *)authTypes navigationController:(UINavigationController *)navigationController;
+@property (nonatomic, readonly)UINavigationController *navigationController;
 +(BOOL)needsAuthorization:(ATCOnboardingAuth) authType;
 +(BOOL)checkAuthAllowed:(ATCOnboardingAuth) authType;
--(UIViewController*)presentationForView:(UIViewController *)presentingView style:(UIModalPresentationStyle)style;
 -(void)nextItem;
 -(void)nextItemWithAuth;
 @end

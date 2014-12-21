@@ -14,13 +14,16 @@
 @end
 
 @implementation ATCOnboardingAuthItem
--(instancetype)initWithView:(UIViewController<ATCOnboardingView>*)view AuthType:(ATCOnboardingAuth)authType requiredAuth:(Boolean)authRequired{
+-(instancetype)initWithView:(UIViewController<ATCOnboardingView>*)view AuthType:(ATCOnboardingAuth)authType{
     self = [super init];
     if (self){
         _authType = authType;
-        _authRequired = authRequired;
         _view = view;
     }
     return self;
+}
+
+-(instancetype)initWithView:(UIViewController<ATCOnboardingView> *)view{
+    return [self initWithView:view AuthType:ATCONboardingAuthNone];
 }
 @end

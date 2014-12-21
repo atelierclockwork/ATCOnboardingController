@@ -12,5 +12,6 @@
 @interface ATCOnboardingAuthItem : NSObject
 @property (nonatomic, readonly) UIViewController<ATCOnboardingView> *view;
 @property (nonatomic, readonly) ATCOnboardingAuth authType;
--(instancetype)initWithView:(UIViewController<ATCOnboardingView> *)view AuthType:(ATCOnboardingAuth)authType requiredAuth:(Boolean)required;
+-(instancetype)initWithView:(UIViewController<ATCOnboardingView> *)view AuthType:(ATCOnboardingAuth)authType;
+-(instancetype)initWithView:(UIViewController<ATCOnboardingView> *)view;
 @end

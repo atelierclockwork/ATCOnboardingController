@@ -5,10 +5,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Auth View Controller-->
+        <!--Authorize Photos?-->
         <scene sceneID="QO0-gz-g8q">
             <objects>
-                <viewController storyboardIdentifier="cameraAuth" id="X7F-4H-5YZ" customClass="ATCAuthViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="cameraAuth" title="Authorize Photos?" id="X7F-4H-5YZ" customClass="ATCAuthViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bWG-Y0-uuv"/>
                         <viewControllerLayoutGuide type="bottom" id="bXc-ny-foH"/>
@@ -27,7 +27,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We need to use your camera to let you take photos." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUV-CG-QOP">
-                                <rect key="frame" x="16" y="28" width="568" height="21"/>
+                                <rect key="frame" x="16" y="72" width="568" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -43,12 +43,14 @@
                             <constraint firstItem="IUV-CG-QOP" firstAttribute="top" secondItem="bWG-Y0-uuv" secondAttribute="bottom" constant="8" symbolic="YES" id="xCV-CN-JU9"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Authorize Camera?" id="Tlx-cD-5fJ"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wFg-DQ-PQ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-499" y="1138"/>
         </scene>
-        <!--Auth View Controller-->
+        <!--Authorize Locations?-->
         <scene sceneID="hzl-Io-McH">
             <objects>
                 <viewController storyboardIdentifier="locationAuth" id="8Ro-db-LFE" customClass="ATCAuthViewController" sceneMemberID="viewController">
@@ -79,7 +81,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We need access to your location to show you offers." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MAP-vE-If8">
-                                <rect key="frame" x="16" y="28" width="568" height="21"/>
+                                <rect key="frame" x="16" y="72" width="568" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -97,12 +99,14 @@
                             <constraint firstAttribute="centerX" secondItem="zS8-9p-KkZ" secondAttribute="centerX" id="zkw-5j-ojM"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Authorize Locations?" id="Q7h-Ag-Jq9"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R6T-K4-E1V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="804" y="1138"/>
         </scene>
-        <!--Auth View Controller-->
+        <!--All Done!-->
         <scene sceneID="VSq-Ma-GjF">
             <objects>
                 <viewController storyboardIdentifier="finishAuth" id="5tf-5T-5CG" customClass="ATCAuthViewController" sceneMemberID="viewController">
@@ -125,7 +129,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank you for taking the time to set up our app." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0tx-b8-4xS">
-                                <rect key="frame" x="16" y="28" width="568" height="21"/>
+                                <rect key="frame" x="16" y="72" width="568" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -141,12 +145,14 @@
                             <constraint firstItem="0tx-b8-4xS" firstAttribute="leading" secondItem="cDs-B8-UXC" secondAttribute="leadingMargin" id="wee-Ku-0Tb"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="All Done!" id="Uvg-BS-rkz"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lq3-M2-fsq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1449" y="1138"/>
         </scene>
-        <!--Auth View Controller-->
+        <!--Authorize Photo Library?-->
         <scene sceneID="eLw-3E-Ina">
             <objects>
                 <viewController storyboardIdentifier="photoAuth" id="7wO-LV-wVS" customClass="ATCAuthViewController" sceneMemberID="viewController">
@@ -168,7 +174,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We need to see old photos to let you apply effects to them." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYd-uP-kZH">
-                                <rect key="frame" x="16" y="28" width="568" height="21"/>
+                                <rect key="frame" x="16" y="72" width="568" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -184,6 +190,8 @@
                             <constraint firstItem="dVm-bc-RGg" firstAttribute="top" relation="greaterThanOrEqual" secondItem="cYd-uP-kZH" secondAttribute="bottom" constant="8" symbolic="YES" id="wHw-Rm-t9H"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Authorize Photo Library?" id="Sgq-2d-cg4"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OKx-8h-n4Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

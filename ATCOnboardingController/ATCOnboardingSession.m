@@ -17,7 +17,6 @@
 
 @interface ATCOnboardingSession()<CLLocationManagerDelegate, UIAdaptivePresentationControllerDelegate>
 @property(nonatomic, strong)NSArray *authTypes;
-@property(nonatomic, strong)UIViewController<ATCOnboardingView> *completionView;
 @property(nonatomic, strong)UINavigationController *navigationController;
 @property(nonatomic)NSUInteger currentIndex;
 -(UIViewController<ATCOnboardingView> *)currentView;
@@ -29,35 +28,22 @@
 
 @implementation ATCOnboardingSession
 static ATCOnboardingSession *_sharedSession;
+-(instancetype)initWithAuthTypes:(NSArray *)authTypes{
+    return [self initWithAuthTypes:authTypes navigationController:[UINavigationController new]];
+}
 
--(instancetype)initWithAuthTypes:(NSArray *)authTypes completionView:(UIViewController<ATCOnboardingView> *)completionView navigationController:(UINavigationController *)navigationController{
+-(instancetype)initWithAuthTypes:(NSArray *)authTypes navigationController:(UINavigationController *)navigationController{
     self = [super init];
     if(self){
         _authTypes = authTypes;
         for(ATCOnboardingAuthItem *item in _authTypes){
             item.view.onboardingSessionDelegate = self;
         }
-        _completionView = completionView;
-        _completionView.onboardingSessionDelegate = self;
         _navigationController = navigationController;
+        _currentIndex = 0;
+        [_navigationController pushViewController:self.currentView animated:NO];
     }
     return self;
-}
-
--(instancetype)initWithAuthTypes:(NSArray *)authTypes completionView:(UIViewController<ATCOnboardingView> *)completionView{
-    UINavigationController *defaultNavigation = [UINavigationController new];
-    [defaultNavigation setNavigationBarHidden:YES];
-    return [self initWithAuthTypes:authTypes completionView:completionView navigationController:defaultNavigation];
-}
-
--(UIViewController *)presentationForView:(UIViewController *)presentingView style:(UIModalPresentationStyle)style{
-    _currentIndex = 0;
-    [_navigationController popToViewController:nil animated:NO];
-    [_navigationController pushViewController:self.currentView animated:NO];
-    _presenter = [[UIPresentationController alloc]initWithPresentedViewController:_navigationController presentingViewController:presentingView];
-    _presenter.delegate = self;
-    _modalStyle = style;
-    return _navigationController;
 }
 
 -(ATCOnboardingAuthItem *)authItemAtIndex:(NSUInteger)index{
@@ -65,11 +51,7 @@ static ATCOnboardingSession *_sharedSession;
 }
 
 -(UIViewController<ATCOnboardingView> *)currentView{
-    if(self.currentIndex < _authTypes.count){
-        return [self authItemAtIndex:_currentIndex].view;
-    }else{
-        return _completionView;
-    }
+    return [self authItemAtIndex:_currentIndex].view;
 }
 
 -(void)nextItemWithAuth{
@@ -90,6 +72,9 @@ static ATCOnboardingSession *_sharedSession;
                 break;
             case ATCOnboardingAuthLocationBackground:
                 [self requestBackgroundLocationAuth];
+                break;
+            case ATCONboardingAuthNone:
+                [self nextItem];
                 break;
         }
     }else{
@@ -156,16 +141,15 @@ static ATCOnboardingSession *_sharedSession;
             return [self cameraNeedsAuth];
         case ATCOnboardingAuthLocationBackground:
             return [self locationNeedsAuth];
-            break;
         case ATCOnboardingAuthLocationForeground:
             return [self locationNeedsAuth];
-            break;
         case ATCOnboardingAuthMicrophone:
             return [self microphoneNeedsAuth];
         case ATCOnboardingAuthPhotos:
             return [self photosNeedsAuth];
+        case ATCONboardingAuthNone :
+            return NO;
     }
-    return NO;
 }
 
 +(BOOL)cameraNeedsAuth{
@@ -188,17 +172,11 @@ static ATCOnboardingSession *_sharedSession;
     return NO;
 }
 
-
-
 -(void)nextItem{
     _currentIndex ++;
-    if(_currentIndex < _authTypes.count + 1){
+    if(_currentIndex < _authTypes.count){
         UIViewController<ATCOnboardingView> *currentView = self.currentView;
-        if(currentView != nil){
-            [_navigationController pushViewController:currentView animated:YES];
-        }else{
-            [_navigationController.presentingViewController dismissViewControllerAnimated:YES completion:nil];
-        }
+        [_navigationController pushViewController:currentView animated:YES];
     }else{
         [_navigationController.presentingViewController dismissViewControllerAnimated:YES completion:nil];
     }

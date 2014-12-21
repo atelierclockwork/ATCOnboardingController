@@ -14,5 +14,6 @@ typedef NS_ENUM(NSInteger, ATCOnboardingAuth) {
     ATCOnboardingAuthPhotos,
     ATCOnboardingAuthMicrophone,
     ATCOnboardingAuthCamera,
+    ATCONboardingAuthNone
 };
 #endif

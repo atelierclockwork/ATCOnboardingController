@@ -11,6 +11,7 @@
 		2619DAFC1A4545ED00A05A55 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2619DAFA1A453FA300A05A55 /* AVFoundation.framework */; };
 		2667927E1A45480500A596CD /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2667927D1A45480500A596CD /* Photos.framework */; };
 		266792801A454AC900A596CD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2667927F1A454AC900A596CD /* CoreLocation.framework */; };
+		2669504C1A4749F40053FF68 /* ATCOnboardingController.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2676CF5D1A44894F0061B6A6 /* ATCOnboardingController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2676CF631A44894F0061B6A6 /* ATCOnboardingController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2676CF621A44894F0061B6A6 /* ATCOnboardingController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2676CF811A448AB80061B6A6 /* ATCOnboardingSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 2676CF7F1A448AB80061B6A6 /* ATCOnboardingSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2676CF821A448AB80061B6A6 /* ATCOnboardingSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 2676CF801A448AB80061B6A6 /* ATCOnboardingSession.m */; };
@@ -37,6 +38,19 @@
 			remoteInfo = ATCOnboardingController;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2669504B1A4749E70053FF68 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2669504C1A4749F40053FF68 /* ATCOnboardingController.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2619DAF81A453DC800A05A55 /* AuthorizationViews.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AuthorizationViews.storyboard; sourceTree = "<group>"; };
@@ -214,6 +228,7 @@
 				2676CF881A448F650061B6A6 /* Sources */,
 				2676CF891A448F650061B6A6 /* Frameworks */,
 				2676CF8A1A448F650061B6A6 /* Resources */,
+				2669504B1A4749E70053FF68 /* CopyFiles */,
 			);
 			buildRules = (
 			);
