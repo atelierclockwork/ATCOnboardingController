@@ -33,6 +33,7 @@
         [authTypes addObject: [[ATCOnboardingAuthItem alloc] initWithView: [self.authorizationViews instantiateViewControllerWithIdentifier:@"finishAuth"]]
          ];
         _authSession =  [[ATCOnboardingSession alloc] initWithAuthTypes:authTypes];
+        _authSession.navigationController.modalPresentationStyle = UIModalPresentationFormSheet;
         [self presentViewController:_authSession.navigationController animated:YES completion:nil];
     }
 }
@@ -51,6 +52,7 @@
         ATCOnboardingAuthItem *locAuth = [[ATCOnboardingAuthItem alloc] initWithView:locationView
                                                                             AuthType:ATCOnboardingAuthLocationForeground];
         _authSession =  [[ATCOnboardingSession alloc] initWithAuthTypes:@[locAuth]];
+        _authSession.navigationController.modalPresentationStyle = UIModalPresentationFormSheet;
         [self presentViewController:
          _authSession.navigationController animated:YES completion:nil];
     }
