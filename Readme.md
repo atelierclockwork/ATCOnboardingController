@@ -16,8 +16,6 @@ Add calendar, social networking, and other authorization types.
 
 Add success and failure blocks for settings authorizations.
 
-Make use of the authorization required flag to allow for potential warnings in the onboarding flow if a user declines an essential authorization.
-
 ##ATCOnboardingAuthDemo
 
 Built as a very simple test case to show how the authorization framework behaves. It constructs a series of onboarding views to explain to the user why each permission is needed before proceeding to the next item.
